@@ -1,6 +1,9 @@
 .container {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   background-color: azure;
   color: var(--color-secondary);
+  min-height: 100vh;
+  min-width: 100vw;
 }
