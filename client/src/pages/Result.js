@@ -53,10 +53,9 @@ function Result() {
           <button className="btn btn-primary">Download Report</button>
         </div>
       </div>
-      <section>
-        <SalaryCard salary={data.salary} />
-      </section>
-      <section>
+      <div className="result-grid">
+        <SalaryCard salary={data.salary} classes={"result-grid-col-span-2"} />
+        <ListCard title={"Benefits"} iconName={"gem"} list={list}></ListCard>
         <ChartCard
           title={"Gender Distribution"}
           labels={[
@@ -65,11 +64,9 @@ function Result() {
           ]}
           dataArray={[data.malePercent, data.femalePercent]}
           iconName="user"
+          classes={"result-grid-col-span-2"}
         />
-      </section>
-      <section>
-        <ListCard title={"Benefits"} iconName={"gem"} list={list}></ListCard>
-      </section>
+      </div>
     </div>
   );
 }

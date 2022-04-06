@@ -2,9 +2,10 @@ import React from "react";
 import Icon from "../icon/icon";
 import "./card.css";
 
-function Card({ title, iconName, content }) {
+function Card({ title, iconName, content, classes }) {
+  const classNames = `card ${classes}`;
   return (
-    <div className="chartCard card mb-3">
+    <div className={classNames}>
       <div className="card-body">
         <div className="card-header mb-3">
           <div className="card-icon">

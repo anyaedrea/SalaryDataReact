@@ -10,3 +10,24 @@
     display: flex;
     align-items: flex-start;
 }
+
+.result-grid {
+    display: grid;
+    gap: 1.5em;
+}
+
+
+@media (min-width: 50em) {
+    .result-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .result-grid-col-span-2 {
+        grid-column: span 2;
+    }
+
+    .card:nth-child(2) {
+        grid-column-start: 3;
+        grid-row: 1 /span 2;
+
+    }
+}

@@ -5,7 +5,7 @@ import "./chartCard.css";
 import Icon from "../icon/icon";
 import Card from "../card/card";
 
-function ChartCard({ title, iconName, labels, dataArray }) {
+function ChartCard({ title, iconName, labels, dataArray, classes }) {
   const backgroundColors = ["#01cda9", "#332d4f", "#e54461", "#b6b544"];
   const chartData = {
     labels: labels,
@@ -40,6 +40,7 @@ function ChartCard({ title, iconName, labels, dataArray }) {
       content={
         <Doughnut data={chartData} options={options} className="chart-canvas" />
       }
+      classes={classes}
     />
   );
 }

@@ -2,7 +2,7 @@ import React from "react";
 import Card from "../card/card";
 import "./salaryCard.css";
 
-function SalaryCard({ salary }) {
+function SalaryCard({ salary, classes }) {
   const formatter = new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD",
@@ -24,6 +24,7 @@ function SalaryCard({ salary }) {
           </div>
         </div>
       }
+      classes={classes}
     ></Card>
   );
 }

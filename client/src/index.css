@@ -38,6 +38,6 @@ code {
 .container-fluid {
   background-color: azure;
   color: var(--color-secondary);
-  padding: 1em;
+  padding: 1em 2em;
   min-height: 100%;
 }
