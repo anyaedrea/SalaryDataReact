@@ -28,6 +28,7 @@ function Home() {
             onChange={handleChange}
             placeholder="job title"
             className="form-control form-control-lg col-12 col-md"
+            required
           ></input>
           <input
             type="text"
@@ -35,6 +36,7 @@ function Home() {
             onChange={handleChange}
             placeholder="location"
             className="form-control form-control-lg col-12 col-md"
+            required
           ></input>
           <button className="btn btn-primary col-12 col-md-auto">
             Check salary
