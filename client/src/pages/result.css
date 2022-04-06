@@ -1,0 +1,28 @@
+.result-title {
+    margin-bottom: 0;
+}
+
+.result-titles {
+    flex: 1;
+}
+
+.result-header {
+    display: flex;
+    align-items: flex-start;
+}
+
+.btn-primary {
+    background-color: var(--color-primary) ;
+    border-color: var(--color-primary);
+    color: #fff;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open>.dropdown-toggle.btn-primary {
+    color: var(--color-secondary);
+    background-color: var(--color-primary-darker);
+    border-color: var(--color-primary-darker);
+}

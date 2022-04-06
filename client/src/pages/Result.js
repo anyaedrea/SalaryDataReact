@@ -3,11 +3,13 @@ import { useHistory, useLocation, useParams } from "react-router-dom";
 import ChartCard from "../components/chartCard/chartCard";
 import SalaryCard from "../components/salaryCard/salaryCard";
 import ListCard from "../components/listCard/listCard";
+import "../variables.css";
+import "./result.css";
 
 function Result() {
   const [data, setData] = useState({
-    title: "",
-    location: "",
+    title: "title",
+    location: "location",
     salary: 0,
     malePercent: 50,
     femalePercent: 50,
@@ -43,8 +45,15 @@ function Result() {
 
   return (
     <div className="result-container">
-      <h1 className="result-title">{data.title}</h1>
-      <h2 className="result-subtitle">{data.location}</h2>
+      <div className="result-header">
+        <div className="result-titles">
+          <h1 className="result-title">{data.title}</h1>
+          <p className="result-subtitle text-muted">{data.location}</p>
+        </div>
+        <div>
+          <button className="btn btn-primary">Download Report</button>
+        </div>
+      </div>
       <section>
         <SalaryCard salary={data.salary} />
       </section>
