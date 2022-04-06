@@ -3,7 +3,6 @@ import { useHistory, useLocation, useParams } from "react-router-dom";
 import ChartCard from "../components/chartCard/chartCard";
 import SalaryCard from "../components/salaryCard/salaryCard";
 import ListCard from "../components/listCard/listCard";
-import "../variables.css";
 import "./result.css";
 
 function Result() {
@@ -44,7 +43,7 @@ function Result() {
   ];
 
   return (
-    <div className="result-container">
+    <div className="result-container container-fluid">
       <div className="result-header">
         <div className="result-titles">
           <h1 className="result-title">{data.title}</h1>

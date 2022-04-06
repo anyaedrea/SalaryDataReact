@@ -37,7 +37,9 @@ function ChartCard({ title, iconName, labels, dataArray }) {
     <Card
       title={title}
       iconName={iconName}
-      content={<Doughnut data={chartData} options={options} />}
+      content={
+        <Doughnut data={chartData} options={options} className="chart-canvas" />
+      }
     />
   );
 }

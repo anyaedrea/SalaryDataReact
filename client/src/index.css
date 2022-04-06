@@ -7,7 +7,37 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html,
+body,
+#app,
+#root {
+  height: 100%
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open>.dropdown-toggle.btn-primary {
+  color: var(--color-secondary);
+  background-color: var(--color-primary-darker);
+  border-color: var(--color-primary-darker);
+}
+
+.container-fluid {
+  background-color: azure;
+  color: var(--color-secondary);
+  padding: 1em;
+  min-height: 100%;
 }

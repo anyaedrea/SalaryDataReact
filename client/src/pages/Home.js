@@ -18,10 +18,10 @@ function Home() {
   };
 
   return (
-    <div className="home-container">
+    <div className="container-fluid center">
       <h1>Are you being underpaid?</h1>
       <form onSubmit={handleSearch} className="search-form">
-        <div className="row .no-gutters">
+        <div className="row g-0">
           <input
             type="text"
             name="job"

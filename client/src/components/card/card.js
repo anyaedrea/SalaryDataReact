@@ -1,6 +1,5 @@
 import React from "react";
 import Icon from "../icon/icon";
-import "bootstrap/dist/css/bootstrap.css";
 import "./card.css";
 
 function Card({ title, iconName, content }) {
