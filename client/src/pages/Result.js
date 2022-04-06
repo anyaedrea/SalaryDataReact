@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { useHistory, useLocation, useParams } from "react-router-dom";
+import ChartCard from "../components/chartCard/chartCard";
+import SalaryCard from "../components/salaryCard/salaryCard";
+import ListCard from "../components/listCard/listCard";
 
 function Result() {
   const [data, setData] = useState({
     title: "",
     location: "",
     salary: 0,
-    malePercent: 0,
-    femalePercent: 0,
+    malePercent: 50,
+    femalePercent: 50,
     matLeave: 0,
   });
   const { job, location } = useParams();
@@ -23,23 +26,41 @@ function Result() {
     };
     fetchData();
   }, []);
+
+  const formatter = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    minimumFractionDigits: 2,
+  });
+
+  const list = [
+    { label: "Maternity Leave", value: `${data.matLeave} weeks` },
+    { label: "Paternity Leave", value: "1.5 weeks" },
+    { label: "Time Off", value: "30 days" },
+    { label: "Healthcare", value: formatter.format(7423) },
+    { label: "Pension", value: formatter.format(10284) },
+  ];
+
   return (
-    <div>
-      <h1>
-        {data.title} - {data.location}
-      </h1>
+    <div className="result-container">
+      <h1 className="result-title">{data.title}</h1>
+      <h2 className="result-subtitle">{data.location}</h2>
       <section>
-        <h2>Average Salary: </h2>
-        <p>{data.salary}</p>
+        <SalaryCard salary={data.salary} />
       </section>
       <section>
-        <h2>Gender Distribution: </h2>
-        <p>Male: {data.malePercent}%</p>
-        <p>Female: {data.femalePercent}%</p>
+        <ChartCard
+          title={"Gender Distribution"}
+          labels={[
+            `Male ${data.malePercent}%`,
+            `Female ${data.femalePercent}%`,
+          ]}
+          dataArray={[data.malePercent, data.femalePercent]}
+          iconName="user"
+        />
       </section>
       <section>
-        <h2>Average Maternal Leave Duration</h2>
-        <p>{data.matLeave} weeks</p>
+        <ListCard title={"Benefits"} iconName={"gem"} list={list}></ListCard>
       </section>
     </div>
   );

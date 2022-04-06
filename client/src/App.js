@@ -5,7 +5,7 @@ import Result from "./pages/Result";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App container">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
