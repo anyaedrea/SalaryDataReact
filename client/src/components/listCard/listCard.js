@@ -5,9 +5,9 @@ import "./listCard.css";
 function ListCard({ title, iconName, list }) {
   let itemList = list.map((el) => {
     return (
-      <div className="row">
-        <span className="label column">{el.label}</span>
-        <span className="value column">{el.value}</span>
+      <div className="listRow">
+        <span className="label listColumn">{el.label}</span>
+        <span className="value listColumn">{el.value}</span>
       </div>
     );
   });

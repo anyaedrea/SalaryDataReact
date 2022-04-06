@@ -7,7 +7,7 @@ function Card({ title, iconName, content }) {
   return (
     <div className="chartCard card mb-3">
       <div className="card-body">
-        <div className="card-header mb-2">
+        <div className="card-header mb-3">
           <div className="card-icon">
             <Icon
               iconName={iconName}
@@ -15,7 +15,7 @@ function Card({ title, iconName, content }) {
               symbolColor={"#332d4f"}
             />
           </div>
-          <h2 className="card-title">{title}</h2>
+          <h3 className="card-title">{title}</h3>
         </div>
         {content}
       </div>

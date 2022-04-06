@@ -1,13 +1,13 @@
-.row {
+.listRow {
     display: flex;
     padding: 1em 0;
     border-bottom: 1px solid lightgray;
 }
 
-.row:last-child {
+.listRow:last-child {
 border-bottom: 0;
 }
-.column {
+.listColumn {
     flex: 50%;
 }
 
